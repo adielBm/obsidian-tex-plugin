@@ -8,7 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
     - uses: actions/checkout@v2
       
@@ -33,32 +34,21 @@ jobs:
           --draft \
           main.js manifest.json styles.css
 
-    - name: Upload release asset manifest.json
+    - name: Upload release assets
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./manifest.json
-        asset_name: manifest.json
-        asset_content_type: application/json
-        
-    - name: Upload release asset main.js
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./main.js
-        asset_name: main.js
-        asset_content_type: text/javascript
-        
-    - name: Upload release asset styles.css
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./styles.css
-        asset_name: styles.css
-        asset_content_type: text/css
+        asset_path: ./
+        asset_name: ${{ matrix.asset_name }}
+        asset_content_type: ${{ matrix.asset_content_type }}
+      strategy:
+        matrix:
+          include:
+            - asset_name: manifest.json
+              asset_content_type: application/json
+            - asset_name: main.js
+              asset_content_type: text/javascript
+            - asset_name: styles.css
+              asset_content_type: text/css
