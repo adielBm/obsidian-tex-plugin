@@ -19,9 +19,7 @@ export default class Adiel_TexPlugin extends Plugin {
     settings: Adiel_TexPluginSettings;
 
     async onload() {
-        // console.log('🔶 onload');
         await this.loadSettings();
-        // Register Markdown code block processor for TikZ
         this.registerMarkdownCodeBlockProcessor('tex', async (source, el, ctx) => {
 
             const pluginDirName = "obsidian-tex-plugin";
