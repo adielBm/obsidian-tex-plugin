@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-tex-plugin",
+	"name": "TeX Plugin",
+	"version": "0.1.0",
+	"minAppVersion": "0.1.0",
+	"description": "(experimental) compile TeX to svg (u/ MikTeX (pdflatex) & dvisvgm)",
+	"author": "adielBm",
+	"authorUrl": "https://github.com/adielBm/obsidian-tex-plugin",
+	"isDesktopOnly": true
+}
