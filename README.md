@@ -1,6 +1,6 @@
 An [Obsidian.md](https://obsidian.md/) plugin to compile TeX to SVG (using MikTeX (pdflatex) & dvisvgm)
 
-I started making this plugin (hopefully I'll manage to make it usful for others) because I wanted to use some packages that are not included in the [obsidian-tikzjax](https://github.com/artisticat1/obsidian-tikzjax) plugin.
+I started making this plugin (hopefully I'll manage to make it usful for others) because I wanted to use some package that are not included in the [obsidian-tikzjax](https://github.com/artisticat1/obsidian-tikzjax) plugin.
 
 > [!WARNING]
 > - This is an **early** version of the plugin; it may not work as expected. 
@@ -12,7 +12,7 @@ I started making this plugin (hopefully I'll manage to make it usful for others)
 
 - [MikTeX](https://miktex.org/download) (for compiling TeX to PDF using `pdflatex`)
 - [dvisvgm](https://dvisvgm.de/Downloads/) (for converting PDF to SVG using `dvisvgm`)
-- Relevant packages for the TeX code you want to compile
+- Relevant packages have to be installed in MikTeX
 
 # Installation
 
@@ -23,12 +23,20 @@ You can clone the repository and build the plugin yourself, using `npm run build
 # Usage
 
 - Use a code block with the `tex` language identifier
+- _Don't_ add `\documentclass` (it's added automatically, with the `standalone` class)
+- Add packages using `\usepackage`
+- Add `\begin{document}` and `\end{document}`
 
-# Example 
+# Example
 
-code exmaple is from [obsidian-tikzjax](https://github.com/artisticat1/obsidian-tikzjax).
+![screenshot](screenshot.png)
 
-![Example usage](image.png)
+```tex
+\usepackage{chemfig}
+\begin{document}
+\chemfig{C(-[:0]H)(-[:90]H)(-[:180]H)(-[:270]H)}
+\end{document}
+```
 
 # TODO 
 
