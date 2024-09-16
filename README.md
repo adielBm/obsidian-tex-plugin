@@ -1,8 +1,6 @@
-# TeX Plugin for Obsidian
-
 An [Obsidian.md](https://obsidian.md/) plugin to compile TeX to SVG (using MikTeX (pdflatex) & dvisvgm)
 
-I started making this plugin (hopefully I'll manage to finish it) because I wanted some packages that are not included in the [obsidian-tikzjax](https://github.com/artisticat1/obsidian-tikzjax) plugin.
+I started making this plugin (hopefully I'll manage to finish it) because I wanted to use some packages that are not included in the [obsidian-tikzjax](https://github.com/artisticat1/obsidian-tikzjax) plugin.
 
 > [!WARNING]
 > - This is an **early** version of the plugin; it may not work as expected. 
@@ -23,7 +21,11 @@ Currently, the plugin is not available in the Obsidian community plugins. You ca
 # Usage
 
 - Use a code block with the `tex` language identifier
-- Include `\documentclass` at the beginning of your TeX code
+- Include `\documentclass{standalone}` at the beginning of your TeX code
+
+# Example 
+
+code exmaple is from [obsidian-tikzjax](https://github.com/artisticat1/obsidian-tikzjax).
 
 ![Example usage](image.png)
 
@@ -31,4 +33,7 @@ Currently, the plugin is not available in the Obsidian community plugins. You ca
 
 - [ ] Add indicator for processing
 - [ ] Improve dark mode support
-- [ ] Many other enhancements
+- [ ] using cache
+- [ ] show errors
+- [ ] fix bugs   
+- [ ] and more...
