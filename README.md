@@ -41,7 +41,7 @@ You can clone the repository and build the plugin yourself, using `npm run build
 # TODO 
 
 - [x] add indicator for processing
-- [ ] better dark mode support (currently it's just uses css `filter: invert(1)`)
+- [x] dark mode support (using `filter: invert(1) hue-rotate(180deg);`)
 - [x] show errors
 - [ ] fix bugs   
 - [ ] and more...
