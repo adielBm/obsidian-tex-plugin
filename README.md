@@ -24,7 +24,7 @@ You can clone the repository and build the plugin yourself, using `npm run build
 
 - Use a code block with the `tex` language identifier
 - _Don't_ add `\documentclass` (it's added automatically, with the `standalone` class)
-- Add packages using `\usepackage`
+- Add packages using `\usepackage` (no packages are included by default, not even `tikz` as it is in [obsidian-tikzjax](https://github.com/artisticat1/obsidian-tikzjax)).
 - Add `\begin{document}` and `\end{document}`
 
 # Example
@@ -43,5 +43,6 @@ You can clone the repository and build the plugin yourself, using `npm run build
 - [x] add indicator for processing
 - [x] dark mode support (using `filter: invert(1) hue-rotate(180deg);`)
 - [x] show errors
+- [ ] add settings (like: default packages, max age of cache)
 - [ ] fix bugs   
 - [ ] and more...
