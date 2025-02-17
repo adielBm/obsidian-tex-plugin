@@ -4,14 +4,15 @@ I started making this plugin (hopefully I'll manage to make it usful for others)
 
 > [!WARNING]
 > - This is an **early** version of the plugin; it may not work as expected. 
-> - The plugin is tested on Windows and will probably not work on other platforms.
 > - You may need additional customization to make it work on your machine.
 > - Desktop only.
 
 # Prerequisites
 
 - [MikTeX](https://miktex.org/download) (for compiling TeX to PDF using `pdflatex`)
-- [dvisvgm](https://dvisvgm.de/Downloads/) (for converting PDF to SVG using `dvisvgm`)
+- pdf to svg:
+    - (for windows) [dvisvgm](https://dvisvgm.de/Downloads/) 
+    - (for mac) https://github.com/dawbarton/pdf2svg (maybe in future it can use in https://github.com/jalios/pdf2svg-windows)
 - Relevant packages have to be installed in MikTeX
 
 # Installation

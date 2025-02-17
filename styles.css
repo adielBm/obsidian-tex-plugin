@@ -1,3 +1,12 @@
 .theme-dark .tex-svg {
     filter: invert(1) hue-rotate(180deg);
 }
+.tex-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tex-svg svg {
+    margin: 0.8rem 0;
+}
