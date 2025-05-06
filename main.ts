@@ -163,7 +163,7 @@ export default class Adiel_TexPlugin extends Plugin {
     }
     
     createSvgElement(svgContent: string, el: HTMLElement) {
-        const scale = 1.3;
+        const scale = 1.6;
         const parser = new DOMParser();
         const doc = parser.parseFromString(svgContent, 'image/svg+xml');
         const svgEl = el.createDiv();
@@ -173,7 +173,7 @@ export default class Adiel_TexPlugin extends Plugin {
         const width = parseFloat(svg.getAttribute('width') || '0');
         const height = parseFloat(svg.getAttribute('height') || '0');
         // Apply the scale transform and set height/width
-        svg.setAttribute('style', `transform: scale(${scale});`);
+        // svg.setAttribute('style', `transform: scale(${scale});`);
         svg.setAttribute('width', `${width * scale}`);
         svg.setAttribute('height', `${height * scale}`);
         // Append the SVG
